@@ -23,3 +23,8 @@ Los siguientes enrutadores no admiten las API de datos:
 Lo primero es lo primero, queremos conectar su aplicación a la URL del navegador: importarla BrowserRouter y renderizarla alrededor de toda su aplicación.
 
 BrowserRouter Es el componente que se encarga de conectar su aplicación a la URL del navegador.
+
+## Agregar Rutas
+- src/routes/About.jsx
+- src/routes/Contacto.jsx
+- src/routes/Inicio.jsx
