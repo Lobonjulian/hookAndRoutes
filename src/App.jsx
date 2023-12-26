@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import { useCallback } from "react";
 
 const App = () => {
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     console.log("iniciando fectchData");
     try {
       const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -17,19 +18,20 @@ const App = () => {
       console.log(error);
       setData([]);
     }
-  };
+  }, []);
+
   useEffect(() => {
     fetchData();
-  }, []); //Le pasamos un array vacío como segundo argumento para que se ejectute una sola vez.
+  }, [fetchData]);
 
   return (
     <>
-      <h1>useEffect - Renderizado condicional</h1>
-      <div className="card">
+      <h1>useEffect</h1>
+      <ul className="card">
         {data.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
-      </div>
+      </ul>
     </>
   );
 };

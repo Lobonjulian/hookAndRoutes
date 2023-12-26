@@ -18,3 +18,11 @@
 ### async await
 <p>También podemos usar async await para hacer peticiones a una API. Pero para ello necesitamos una función async.</p>
 
+## useCallback
+
+<p>useCallback es un hook que nos permite memorizar una función. Esto quiere decir que si la función que le pasamos como argumento no ha cambiado, useCallback no la volverá a crear. </p>
+
+Necesitas pasar dos cosas a useCallback:
+
+1. Una definición de función que desea almacenar en caché entre renderizaciones.
+2. Una lista de dependencias que incluye cada valor dentro de su componente que se usa dentro de su función.
