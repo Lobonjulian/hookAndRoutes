@@ -28,3 +28,13 @@ BrowserRouter Es el componente que se encarga de conectar su aplicación a la UR
 - src/routes/About.jsx
 - src/routes/Contacto.jsx
 - src/routes/Inicio.jsx
+
+## Rutas anidadas (Layout)
+
+Las rutas anidadas se pueden usar para crear un diseño de página (Layout) que se repite en varias páginas.
+
+1. Observe que tiene el index prop en lugar de path.
+Eso es porque la ruta del índice comparte la ruta del padre.
+2. Las rutas de índice coinciden cuando una ruta principal coincide, pero ninguna de las otras secundarias coincide.
+3. Las rutas de índice son la ruta secundaria predeterminada para una ruta principal.
+4. Las rutas de índice se representan cuando el usuario aún no ha hecho clic en uno de los elementos de una lista de navegación.
