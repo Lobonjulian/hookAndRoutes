@@ -1,32 +1,26 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
-import { useCallback } from "react";
+import { UseFetch } from "./hooks/useFetch";
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [contador, setContador] = useState(0);
 
-  const fetchData = useCallback(async () => {
-    console.log("iniciando fectchData");
-    try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      if (!res.ok) {
-        throw Error("No se pudo realizar la petición");
-      }
-      const data = await res.json();
-      setData(data);
-    } catch (error) {
-      console.log(error);
-      setData([]);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+  const { data, loading, error } = UseFetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
+  if (loading) {
+    return <h1>Cargando...</h1>;
+  }
+  if (error) {
+    return <h1>Error</h1>;
+  }
 
   return (
     <>
       <h1>useEffect</h1>
+      <button onClick={() => setContador(contador + 1)}>
+        Incremento {contador}
+      </button>
       <ul className="card">
         {data.map((user) => (
           <li key={user.id}>{user.name}</li>
