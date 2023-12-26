@@ -11,6 +11,10 @@
 <p>¿Se ejecuta useEffect después de cada renderizado? ¡Sí! Por defecto se ejecuta después del primer renderizado y después de cada actualización.
 </p>
 
-###fetch
+### fetch
 
 <p>Una de las funciones más importantes de useEffect es la de hacer peticiones a una API </p>
+
+### async await
+<p>También podemos usar async await para hacer peticiones a una API. Pero para ello necesitamos una función async.</p>
+

@@ -1,14 +1,24 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-    console.log("se esta renderizando");
+    const fetchData = async () => {
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        if (!res.ok) {
+          throw Error("No se pudo realizar la petición");
+        }
+        const data = await res.json();
+        setData(data);
+      } catch (error) {
+        console.log(error);
+        setData([]);
+      }
+    };
+    fetchData();
   }, []); //Le pasamos un array vacío como segundo argumento para que se ejectute una sola vez.
 
   return (
@@ -21,6 +31,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
