@@ -38,3 +38,8 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 2. Las rutas de índice coinciden cuando una ruta principal coincide, pero ninguna de las otras secundarias coincide.
 3. Las rutas de índice son la ruta secundaria predeterminada para una ruta principal.
 4. Las rutas de índice se representan cuando el usuario aún no ha hecho clic en uno de los elementos de una lista de navegación.
+
+### Parámetros de búsqueda
+- React Router hace que sea fácil de leer y manipular los parámetros de búsqueda con useSearchParams
+- El useSearchParams se utiliza para leer y modificar la cadena de consulta en la URL de la ubicación actual.
+- Funciona de manera muy similar, React.useState() pero almacena y establece el estado en los parámetros de búsqueda de URL en lugar de en la memoria.
