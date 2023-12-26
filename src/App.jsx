@@ -4,6 +4,7 @@ import Inicio from "./pages/Inicio";
 import About from "./pages/About";
 import Contacto from "./pages/Contacto";
 import LayoutPage from "./pages/LayoutPage";
+import NoEncontrada from "./pages/NoEncontrada";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Inicio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contacto />} />
+          <Route path="*" element={<NoEncontrada />} />
         </Route>
       </Routes>
       <div className="container">
