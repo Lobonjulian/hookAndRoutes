@@ -4,20 +4,21 @@ import "./App.css";
 const App = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
-        if (!res.ok) {
-          throw Error("No se pudo realizar la petición");
-        }
-        const data = await res.json();
-        setData(data);
-      } catch (error) {
-        console.log(error);
-        setData([]);
+  const fetchData = async () => {
+    console.log("iniciando fectchData");
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      if (!res.ok) {
+        throw Error("No se pudo realizar la petición");
       }
-    };
+      const data = await res.json();
+      setData(data);
+    } catch (error) {
+      console.log(error);
+      setData([]);
+    }
+  };
+  useEffect(() => {
     fetchData();
   }, []); //Le pasamos un array vacío como segundo argumento para que se ejectute una sola vez.
 
