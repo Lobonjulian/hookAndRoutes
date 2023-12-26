@@ -1,28 +1,25 @@
-# Hook
+# Routes v6
 
-## useEffect
+<p> React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React.
+React Router se ejecuta en cualquier lugar donde se ejecute React; en la web, en el servidor con node.js y en React Native.</p>
 
-<p> useEffect: El Hook de efecto te permite llevar a cabo efectos secundarios en componentes funcionales.</p>
+<code>
+npm i react-router-dom@6
+</code>
 
-<p>Al usar este Hook, le estamos indicando a React que el componente tiene que hacer algo después de renderizarse.</p>
+#### enrutador
 
-<p>React recordará la función que le hemos pasado (nos referiremos a ella como nuestro “efecto”), y la llamará más tarde después de actualizar el DOM.</p>
+Si bien su aplicación solo usará un solo enrutador, hay varios enrutadores disponibles según el entorno en el que se esté ejecutando su aplicación.
 
-<p>¿Se ejecuta useEffect después de cada renderizado? ¡Sí! Por defecto se ejecuta después del primer renderizado y después de cada actualización.
-</p>
+Los siguientes enrutadores no admiten las API de datos:
 
-### fetch
+1. BrowserRouter
+2. MemoryRouter
+3. HashRouter
+4. NativeRouter
+5. StaticRouter
 
-<p>Una de las funciones más importantes de useEffect es la de hacer peticiones a una API </p>
+## BrowserRouter
+Lo primero es lo primero, queremos conectar su aplicación a la URL del navegador: importarla BrowserRouter y renderizarla alrededor de toda su aplicación.
 
-### async await
-<p>También podemos usar async await para hacer peticiones a una API. Pero para ello necesitamos una función async.</p>
-
-## useCallback
-
-<p>useCallback es un hook que nos permite memorizar una función. Esto quiere decir que si la función que le pasamos como argumento no ha cambiado, useCallback no la volverá a crear. </p>
-
-Necesitas pasar dos cosas a useCallback:
-
-1. Una definición de función que desea almacenar en caché entre renderizaciones.
-2. Una lista de dependencias que incluye cada valor dentro de su componente que se usa dentro de su función.
+BrowserRouter Es el componente que se encarga de conectar su aplicación a la URL del navegador.
