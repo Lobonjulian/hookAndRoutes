@@ -1,27 +1,24 @@
-import { useParams } from "react-router-dom";
-import { useFetch } from "../Hooks/useFetch";
+import { useLoaderData } from "react-router-dom";
 
 const Post = () => {
-  let parametro = useParams();
-
-  const { data, error, loading } = useFetch(
-    "https://jsonplaceholder.typicode.com/posts/" + parametro.id
-  );
-  if (loading) {
-    return <h2>cargando</h2>;
-  }
-  if (error) {
-    return <h2>{error}</h2>;
-  }
+  const { post } = useLoaderData();
 
   return (
     <div>
-      <h1>
-        {data.id} - {data.title}
+      <h1 className="text-center font-bold">
+        {post.id} - {post.title}
       </h1>
-      <p>{data.body}</p>
+      <p className="my-4 text-center">{post.body}</p>
     </div>
   );
 };
 
 export default Post;
+
+export const loadingPost = async ({ params }) => {
+  const data = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params.id}`
+  );
+  const post = await data.json();
+  return { post };
+};

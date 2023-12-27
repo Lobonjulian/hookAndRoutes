@@ -65,3 +65,7 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 <p>es un componente especializado para crear enlaces de navegación. Este componente se utiliza para crear enlaces de navegación que se activan cuando la ruta coincide con la URL actual.</p>
 
 <p>De forma predeterminada se utiliza la clase CSS active para marcar el enlace como activo.</p>
+
+## Loader y useLoaderData
+
+<p> Hay dos API que usaremos para cargar datos loader y useLoaderData. Primero crearemos y exportaremos una función de cargador en el módulo raíz, luego la conectaremos a la ruta. Finalmente, accederemos y renderizaremos los datos. </p>
