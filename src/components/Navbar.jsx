@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 const Navbar = () => {
+  console.log(useUserContext());
   return (
     <nav className="flex justify-center items-center">
       <div className="my-4">

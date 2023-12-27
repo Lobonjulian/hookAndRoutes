@@ -1,7 +1,7 @@
 const Inicio = () => {
   return (
-    <div>
-      <h1>pagina principal</h1>
+    <div className="container flex flex-col items-center justify-center">
+      <h1 className="font-semibold ">pagina principal</h1>
     </div>
   );
 };

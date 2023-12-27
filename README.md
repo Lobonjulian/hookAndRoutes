@@ -77,3 +77,30 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 
 #### Error data
 Si la solicitud falla, podemos activar un error de datos para que el usuario pueda volver a intentarlo.
+
+# Contex API
+
+- Context provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+
+- Context está diseñado para compartir datos que pueden considerarse “globales” para un árbol de componentes en React, como el usuario autenticado actual, el tema o el idioma preferido.
+
+- Si trabajas con diferentes vistas estas no estarán anidadas, por ende Context proporciona una solución
+
+## Redux vs Context#
+
+Redux proporciona un conjunto de herramientas completo para administrar el estado:
+1. Viene con un depurador que viaja en el tiempo.
+2. Proporciona una API de middleware que le brinda acceso a herramientas como redux-sagas.
+3. Sus enlaces de React evitan muchos renderizados innecesarios.
+
+<p>El contexto no reemplaza a Redux. El contexto no le permitirá viajar en el tiempo con depuración, middleware configurable.</p>
+
+<p>Context es una forma de obtener datos de un lugar a otro. Si desea una herramienta que lo ayude a administrar su estado, Redux es una excelente opción.</p>
+
+## CreateContext
+
+Crea un objeto Context. Cuando React renderiza un componente que se suscribe a este objeto Context, este leerá el valor de contexto actual del Provider más cercano en el árbol.
+
+Cada objeto Context viene con un componente Provider de React que permite que los componentes que lo consumen se suscriban a los cambios del contexto.
+
+El componente Provider acepta una prop value que se pasará a los componentes consumidores que son descendientes de este Provider.

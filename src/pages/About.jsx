@@ -4,7 +4,7 @@ const About = () => {
   const { about } = useLoaderData();
 
   return (
-    <ul>
+    <ul className="flex flex-col items-center">
       {about.length > 0 ? (
         about.map((abouts) => (
           <li key={abouts.id}>
