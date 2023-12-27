@@ -4,7 +4,7 @@
 React Router se ejecuta en cualquier lugar donde se ejecute React; en la web, en el servidor con node.js y en React Native.</p>
 
 <code>
-npm i react-router-dom@6
+npm i react-router-dom
 </code>
 
 #### enrutador
@@ -43,3 +43,19 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 - React Router hace que sea fácil de leer y manipular los parámetros de búsqueda con useSearchParams
 - El useSearchParams se utiliza para leer y modificar la cadena de consulta en la URL de la ubicación actual.
 - Funciona de manera muy similar, React.useState() pero almacena y establece el estado en los parámetros de búsqueda de URL en lugar de en la memoria.
+
+# React Router v.6.4
+
+<h6>Version especifica</h6>
+
+<code>npm install react-router-dom@6.4</code>
+
+<h2>Agregar Enrutador</h2>
+
+<p>Lo primero que debemos hacer es crear un enrutador de navegador y configurar nuestra primera ruta. Esto habilitará el enrutamiento del lado del cliente para nuestra aplicación web.</p>
+
+#### createBrowserRouter
+
+<p> Este es el enrutador recomendado para todos los proyectos web de React Router. Utiliza DOM history API para actualizar la URL y administrar la pila de historial. </p>
+
+<p>También habilita la data API v6.4 como loaders, actions, fetchers y más.</p>

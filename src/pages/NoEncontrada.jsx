@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
 
 const NoEncontrada = () => {
+  const error = useRouteError();
+
   return (
     <div>
       <h1>404</h1>
-      <Link to="/">Volver al inicio</Link>
+      <p>Pagina de ERROR</p>
+      <p>{error.statusText || error.message} </p>
     </div>
   );
 };
