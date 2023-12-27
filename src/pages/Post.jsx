@@ -20,5 +20,12 @@ export const loadingPost = async ({ params }) => {
     `https://jsonplaceholder.typicode.com/posts/${params.id}`
   );
   const post = await data.json();
+
+  if (!data.ok)
+    throw {
+      status: data.status,
+      statusText: "Code: " + data.status,
+    };
+
   return { post };
 };

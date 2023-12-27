@@ -12,20 +12,25 @@ export const router = createBrowserRouter([
     element: <LayoutPage />,
     errorElement: <NoEncontrada />,
     children: [
-      { index: true, element: <Inicio /> },
       {
-        path: "/about",
-        element: <About />,
-        loader: loadingAbout,
-      },
-      {
-        path: "/about/:id",
-        element: <Post />,
-        loader: loadingPost,
-      },
-      {
-        path: "/contact",
-        element: <Contacto />,
+        errorElement: <NoEncontrada />,
+        children: [
+          { index: true, element: <Inicio /> },
+          {
+            path: "/about",
+            element: <About />,
+            loader: loadingAbout,
+          },
+          {
+            path: "/about/:id",
+            element: <Post />,
+            loader: loadingPost,
+          },
+          {
+            path: "/contact",
+            element: <Contacto />,
+          },
+        ],
       },
     ],
   },

@@ -69,3 +69,11 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 ## Loader y useLoaderData
 
 <p> Hay dos API que usaremos para cargar datos loader y useLoaderData. Primero crearemos y exportaremos una función de cargador en el módulo raíz, luego la conectaremos a la ruta. Finalmente, accederemos y renderizaremos los datos. </p>
+
+## useNavigation#
+<p>Este gancho le dice todo lo que necesita saber sobre la navegación de una página para crear indicadores de navegación pendientes y una interfaz de usuario optimista sobre mutaciones de datos. </p>
+
+<p>navigation: Devuelve el estado de navegación actual: puede ser uno de "idle" | "submitting" | "loading".</p>
+
+#### Error data
+Si la solicitud falla, podemos activar un error de datos para que el usuario pueda volver a intentarlo.
