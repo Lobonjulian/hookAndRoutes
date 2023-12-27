@@ -18,12 +18,12 @@ const Navbar = () => {
         >
           Contacto
         </NavLink>
-        <NavLink
-          to="tareas"
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
-        >
-          Tareas
-        </NavLink>
+        {user && (
+          <>
+            <NavLink to="tareas">Tareas</NavLink>
+            <button>Cerrar Sesion</button>
+          </>
+        )}
       </div>
     </nav>
   );

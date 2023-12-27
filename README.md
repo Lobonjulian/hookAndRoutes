@@ -104,3 +104,10 @@ Crea un objeto Context. Cuando React renderiza un componente que se suscribe a e
 Cada objeto Context viene con un componente Provider de React que permite que los componentes que lo consumen se suscriban a los cambios del contexto.
 
 El componente Provider acepta una prop value que se pasará a los componentes consumidores que son descendientes de este Provider.
+
+## Provider
+
+Cada objeto Context viene con un componente Provider de React que permite que los componentes que lo consumen se suscriban a los cambios del contexto.
+
+El componente Provider acepta una prop value que se pasará a los componentes consumidores que son descendientes de este Provider.
+
