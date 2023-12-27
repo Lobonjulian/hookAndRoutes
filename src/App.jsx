@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import About from "./pages/About";
 import Contacto from "./pages/Contacto";
-import LayoutPage from "./pages/LayoutPage";
+import LayoutPage from "./layaut/LayoutPublic";
 import NoEncontrada from "./pages/NoEncontrada";
 import Post from "./pages/Post";
 

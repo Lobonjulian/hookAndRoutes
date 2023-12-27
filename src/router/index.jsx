@@ -3,9 +3,23 @@ import Inicio from "../pages/Inicio";
 import About from "../pages/About";
 import Contacto from "../pages/Contacto";
 import NoEncontrada from "../pages/NoEncontrada";
+import LayoutPage from "../layaut/LayoutPublic";
 
 export const router = createBrowserRouter([
-  { path: "/", element: <Inicio />, errorElement: <NoEncontrada /> },
-  { path: "/about", element: <About />, errorElement: <NoEncontrada /> },
-  { path: "/", element: <Contacto />, errorElement: <NoEncontrada /> },
+  {
+    path: "/",
+    element: <LayoutPage />,
+    errorElement: <NoEncontrada />,
+    children: [
+      { index: true, element: <Inicio /> },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contacto />,
+      },
+    ],
+  },
 ]);
