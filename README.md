@@ -59,3 +59,9 @@ Eso es porque la ruta del índice comparte la ruta del padre.
 <p> Este es el enrutador recomendado para todos los proyectos web de React Router. Utiliza DOM history API para actualizar la URL y administrar la pila de historial. </p>
 
 <p>También habilita la data API v6.4 como loaders, actions, fetchers y más.</p>
+
+## NavLink 
+
+<p>es un componente especializado para crear enlaces de navegación. Este componente se utiliza para crear enlaces de navegación que se activan cuando la ruta coincide con la URL actual.</p>
+
+<p>De forma predeterminada se utiliza la clase CSS active para marcar el enlace como activo.</p>
