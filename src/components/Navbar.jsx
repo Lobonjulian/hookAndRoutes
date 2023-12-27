@@ -9,19 +9,10 @@ const Navbar = () => {
         <NavLink to="/" className="m-2 bg-sky-500 border-none rounded p-1">
           Inicio
         </NavLink>
-        <NavLink to="/about" className="m-2 bg-sky-500 border-none rounded p-1">
-          About
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className="m-2 bg-sky-500 border-none rounded p-1"
-        >
-          Contacto
-        </NavLink>
         {user && (
           <>
-            <NavLink to="tareas">Tareas</NavLink>
-            <button>Cerrar Sesion</button>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+            <button onClick={() => setUser(null)}>Cerrar Sesion</button>
           </>
         )}
       </div>

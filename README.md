@@ -111,3 +111,6 @@ Cada objeto Context viene con un componente Provider de React que permite que lo
 
 El componente Provider acepta una prop value que se pasará a los componentes consumidores que son descendientes de este Provider.
 
+## Private Rutes
+
+Las rutas protegidas son rutas que solo se pueden acceder si el usuario está autenticado. Si el usuario no está autenticado, se redirige a la página de inicio de sesión.
