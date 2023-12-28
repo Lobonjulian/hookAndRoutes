@@ -3,8 +3,9 @@ import Inicio from "../pages/Inicio";
 import About, { loadingAbout } from "../pages/About";
 import Contacto from "../pages/Contacto";
 import NoEncontrada from "../pages/NoEncontrada";
-import LayoutPage from "../layaut/LayoutPublic";
+import LayoutPage from "../layaut/LayoutPrivate";
 import Post, { loadingPost } from "../pages/Post";
+import Dashboard from "../pages/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
           {
             path: "/contact",
             element: <Contacto />,
+          },
+          {
+            path: "/dashboard",
+            element: <Dashboard />,
           },
         ],
       },

@@ -9,12 +9,12 @@ const Navbar = () => {
         <NavLink to="/" className="m-2 bg-sky-500 border-none rounded p-1">
           Inicio
         </NavLink>
-        {user && (
+        {/* {user && (
           <>
             <NavLink to="/dashboard">Dashboard</NavLink>
             <button onClick={() => setUser(null)}>Cerrar Sesion</button>
           </>
-        )}
+        )} */}
       </div>
     </nav>
   );
